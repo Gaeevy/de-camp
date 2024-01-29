@@ -1,0 +1,5 @@
+pg_user: root
+pg_password: root
+pg_host: localhost
+pg_port: 5432
+pg_db: ny_taxi

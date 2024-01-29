@@ -1,0 +1,12 @@
+docker run -it \
+    -e POSTGRES_USER=root \
+    -e POSTGRES_PASSWORD=root \
+    -e POSTGRES_DB=ny_taxi \
+    -v $(pwd)/v_pg_ny_taxi:/var/lib/postgresql/data \
+    -p 5432:5432 \
+    --name gaeevy-pg postgres:14
+
+
+python -m data_ingestion \
+    --data_url="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz" \
+    --data_name="yellow_tripdata"

@@ -1,0 +1,7 @@
+pandas
+sqlalchemy
+psycopg2
+requests
+pyarrow
+pyyaml
+python-box
